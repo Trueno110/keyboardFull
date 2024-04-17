@@ -1,0 +1,256 @@
+﻿<Window x:Class="KV.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KV"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="Auto" Width="Auto">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Orientation="Horizontal">
+                <TextBlock Text="Speed: "/>
+                <TextBlock Text="0 " FontWeight="Bold"/>
+                <TextBlock Text="chars/min"/>
+            </StackPanel>
+            <StackPanel Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" Orientation="Horizontal">
+                <TextBlock Text="fals " />
+                <TextBlock Text="0" FontWeight="Bold"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="2">
+                <TextBlock Text="Diffoulty "/>
+                <TextBlock Text="0" FontWeight="Bold" Name="dificul" />
+            </StackPanel>
+            <Slider Grid.Row="0" Grid.Column="2" Width="120" Margin="78,0,0,0" IsSnapToTickEnabled="True" HorizontalAlignment="Left" Maximum="58" x:Name="polzun" ValueChanged="Slider_ValueChanged_1"/>
+            <CheckBox Content="Case Sensitive" Grid.Row="0" Grid.Column="3"/>
+            <Button Grid.Column="2" Grid.Row="1" Height="30"  Content="Start" Margin="2,2,2,0" VerticalAlignment="Top" Name ="Start_button" Click="Start_button_click"/>
+            <Button Grid.Column="3" Grid.Row="1" Height="30" Content="Stop" Margin="2" Name ="Stop_button"  IsEnabled="False" Click="Stop_button_click"/>
+        </Grid>
+        <Grid Grid.Row="1" Background="AliceBlue">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+             <TextBlock FontSize="30"  Grid.Row="0" Name="FirstBlock" />
+            <TextBlock FontSize="30" Name="VividBlock" KeyDown="VividBlock_KeyDown" KeyUp="VividBlock_KeyUp" Grid.Row="1"/>
+     
+        </Grid>
+        <StackPanel Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Grid>
+                <StackPanel Orientation="Horizontal">
+                    <Border Name="TildaBorder" Width="50" Height="50" Background="#FFF07795" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="1">
+                        <TextBlock Name="tilda" Text="`" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <Border Name="Borderone" Width="50" Height="50" Background="#FFF07795" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="1">
+                        <TextBlock Name ="one" Text="1" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <Border Name="Bordertwo" Width="50" Height="50" Background="#FFF07795" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="1">
+                        <TextBlock Name ="two" Text="2" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <Border Name="Borderthree" Width="50" Height="50" Background="#FFE6F077" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="1">
+                        <TextBlock Name ="three" Text="3" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <Border Name="fourBorder"  Width="50" Background="#FF7FF077" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="1">
+                        <TextBlock Name ="four" Text="4" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <Border Name="FiveBorder" Width="50" Height="50" Background="#FF77BEF0" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="1">
+                        <TextBlock Name ="five" Text="5" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <Border Name="SixBorder" Width="50" Height="50" Background="#FF77BEF0" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="1">
+                        <TextBlock Name ="six" Text="6" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <Border Name="SevenBorder" Width="50" Height="50" Background="#FFDB77F0" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="1">
+                        <TextBlock Name ="seven" Text="7" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <Border Name="EightBorder" Width="50" Height="50" Background="#FFDB77F0" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="1">
+                        <TextBlock Name ="eight" Text="8" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <Border Name="NineBorder" Width="50" Height="50" Background="#FFF07795" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="1">
+                        <TextBlock Name ="nine" Text="9" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <Border Name="ZeroBorder" Width="50" Height="50" Background="#FFE6F077" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="1">
+                        <TextBlock Name ="zero" Text="0" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <Border Name="MinusBorder" Width="50" Height="50" Background="#FF7FF077" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="1">
+                        <TextBlock Name ="minus" Text="-" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <Border Name="EquallyBorder" Width="50" Height="50" Background="#FF7FF077" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="1">
+                        <TextBlock Name ="ravno" Text="=" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <Border Name="BackSpace" Width="150" Height="50" Background="#FFB5B5B5" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="1">
+                        <TextBlock Name ="backspace" Text="BackSpase" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </StackPanel>
+            </Grid>
+            <Grid>
+                <StackPanel Orientation="Horizontal">
+                    <Border Name="Tab" Width="100" Height="50" Background="#FFB5B5B5" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="1">
+                        <TextBlock Name ="tab" Text="Tab" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <Border Name="qBorder" Width="50" Height="50" Background="#FFF07795" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="1">
+                        <TextBlock Name ="blockQ" Text="q" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <Border Name="wBorder" Width="50" Height="50" Background="#FFE6F077" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="1">
+                        <TextBlock Name ="blockW" Text="w" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <Border Name="eBorder" Width="50" Height="50" Background="#FF7FF077" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="1">
+                        <TextBlock Name ="blockE" Text="e" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <Border Name="rBorder" Width="50" Height="50" Background="#FF77BEF0" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="1">
+                        <TextBlock Name ="blockR" Text="r" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <Border Name="tBorder" Width="50" Height="50" Background="#FF77BEF0" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="1">
+                        <TextBlock Name ="blockT" Text="t" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <Border Name="yBorder" Width="50" Height="50" Background="#FFDB77F0" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="1">
+                        <TextBlock Name ="blockY" Text="y" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <Border Name="uBorder" Width="50" Height="50" Background="#FFDB77F0" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="1">
+                        <TextBlock Name ="blockU" Text="u" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <Border Name="iBorder" Width="50" Height="50" Background="#FFF07795" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="1">
+                        <TextBlock Name ="blockI" Text="i" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <Border Name="oBorder" Width="50" Height="50" Background="#FFE6F077" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="1">
+                        <TextBlock Name ="blockO" Text="o" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <Border Name="pBorder" Width="50" Height="50" Background="#FF7FF077" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="1">
+                        <TextBlock Name ="blockP" Text="p" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <Border Name="openBorder" Width="50" Height="50" Background="#FF7FF077" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="1">
+                        <TextBlock Name ="blockOpen" Text="[" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <Border Name="closeBorder" Width="50" Height="50" Background="#FF7FF077" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="1">
+                        <TextBlock Name ="blockClose" Text="]" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <Border Name="obrsleshBorder" Width="100" Height="50" Background="#FF7FF077" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="1">
+                        <TextBlock Name ="blockObrSlesh" Text="\" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </StackPanel>
+            </Grid>
+            <Grid>
+                <StackPanel Orientation="Horizontal">
+                    <Border Name="CapsLock" Width="126" Height="50" Background="#FFB5B5B5" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="1">
+                        <TextBlock Name ="blockCaps" Text="Caps Lock" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+                    <Border Name="aBorder" Width="50" Height="50" Background="#FFF07795" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="1">
+                        <TextBlock Name ="blockA" Text="a" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <Border Name="sBorder" Width="50" Height="50" Background="#FFE6F077" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="1">
+                        <TextBlock Name ="blockS" Text="s" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <Border Name="dBorder" Width="50" Height="50" Background="#FF7FF077" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="1">
+                        <TextBlock Name="blockD" Text="d" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <Border Name="fBorder" Width="50" Height="50" Background="#FF77BEF0" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="1">
+                        <TextBlock Name ="blockF" Text="f" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <Border Name="gBorder" Width="50" Height="50" Background="#FF77BEF0" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="1">
+                        <TextBlock Name ="blockG" Text="g" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <Border Name="hBorder" Width="50" Height="50" Background="#FFDB77F0" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="1">
+                        <TextBlock Name ="blockH" Text="h" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <Border Name="jBorder" Width="50" Height="50" Background="#FFDB77F0" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="1">
+                        <TextBlock Name ="blockJ" Text="j" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <Border Name="kBorder" Width="50" Height="50" Background="#FFF07795" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="1">
+                        <TextBlock Name ="blockK" Text="k" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <Border Name="lBorder" Width="50" Height="50" Background="#FFE6F077" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="1">
+                        <TextBlock Name ="blockL" Text="l" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <Border Name="semicolonBorder" Width="50" Height="50" Background="#FF7FF077" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="1">
+                        <TextBlock Name ="blockSemico" Text=";" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <Border Name="heigBorder" Width="50" Height="50" Background="#FF7FF077" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="1">
+                        <TextBlock Name ="blockHeig" Text="'" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <Border Name="Enter" Width="126" Height="50" Background="#FFB5B5B5" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="1">
+                        <TextBlock Name ="blockEnter" Text="Enter" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </StackPanel>
+            </Grid>
+            <Grid>
+                <StackPanel Orientation="Horizontal">
+                    <Border Name="LShift" Width="152" Height="50" Background="#FFB5B5B5" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="1">
+                        <TextBlock Name ="blockLShift" Text="Shift" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <Border Name="zBorder" Width="50" Height="50" Background="#FFF07795" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="1">
+                        <TextBlock Name ="blockZ" Text="z" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <Border Name="xBorder" Width="50" Height="50" Background="#FFE6F077" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="1">
+                        <TextBlock Name ="blockX" Text="x" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <Border Name="cBorder" Width="50" Height="50" Background="#FF7FF077" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="1">
+                        <TextBlock Name ="blockC" Text="c" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <Border Name="vBorder" Width="50" Height="50" Background="#FF77BEF0" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="1">
+                        <TextBlock Name ="blockV" Text="v" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <Border Name="bBorder" Width="50" Height="50" Background="#FF77BEF0" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="1">
+                        <TextBlock Name ="blockB" Text="b" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <Border Name="nBorder" Width="50" Height="50" Background="#FFDB77F0" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="1">
+                        <TextBlock Name ="blockN" Text="n" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <Border Name="mBorder" Width="50" Height="50" Background="#FFDB77F0" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="1">
+                        <TextBlock Name ="blockM" Text="m" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <Border Name="dowBorder" Width="50" Height="50" Background="#f4a460" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="1">
+                        <TextBlock Name ="blockDow" Text="," FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <Border Name="dotBorder" Width="50" Height="50" Background="#FFE6F077" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="1">
+                        <TextBlock Name ="blockDot" Text="." FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <Border Name="sleshBorder" Width="50" Height="50" Background="#FF7FF077" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="1">
+                        <TextBlock Name ="blockSlesh" Text="/" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <Border Name="RShift" Width="152" Height="50" Background="#FFB5B5B5" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="1">
+                        <TextBlock Name ="blockRShift" Text="Shift" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </StackPanel>
+            </Grid>
+            <Grid>
+                <StackPanel Orientation="Horizontal">
+                    <Border Name="LCtrl" Width="80" Height="50" Background="#FFB5B5B5" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="1">
+                        <TextBlock Name ="blockLCtrl" Text="Ctrl" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <Border Name="LWin" Width="80" Height="50" Background="#FFB5B5B5" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="1">
+                        <TextBlock Name ="blockLWin" Text="Win" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <Border Name="LAlt" Width="80" Height="50" Background="#FFB5B5B5" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="1">
+                        <TextBlock Name ="blockLAlt" Text="Alt" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <Border Name="Space" Width="335" Height="50" Background="#f4a460" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="1">
+                        <TextBlock Name ="blockSpace" Text="Spase" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <Border Name="RAlt" Width="80" Height="50" Background="#FFB5B5B5" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="1">
+                        <TextBlock Name ="blockRAlt" Text="Alt" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <Border Name="RWin" Width="80" Height="50" Background="#FFB5B5B5" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="1">
+                        <TextBlock Name ="blockRWin" Text="Win" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <Border Name="RCtrl" Width="80" Height="50" Background="#FFB5B5B5" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="1">
+                        <TextBlock Name ="blockRCtrl" Text="Ctrl" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Window>
